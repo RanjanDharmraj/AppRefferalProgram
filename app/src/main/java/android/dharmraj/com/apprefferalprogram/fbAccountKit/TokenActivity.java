@@ -1,5 +1,7 @@
 package android.dharmraj.com.apprefferalprogram.fbAccountKit;
 
+import android.content.Intent;
+import android.dharmraj.com.apprefferalprogram.HomeActivity;
 import android.dharmraj.com.apprefferalprogram.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ public class TokenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_token);
+        startActivity(new Intent(this, HomeActivity.class));
         final Button signOut = (Button) findViewById(R.id.log_out_button);
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override

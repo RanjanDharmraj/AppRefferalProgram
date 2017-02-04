@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">App Refferal Program</string>
-    <string name="facebook_app_id">411250219226485</string>
-    <string name="ak_login_protocol_scheme">ak411250219226485</string>
-    <string name="client_token">afcc20af339c90850e4944c873e17757</string>
+
+    <string name="ak_login_protocol_scheme">ak964234977027033</string>
+    <string name="facebook_app_id">964234977027033</string>
+    <string name="client_token">799de49b357b77afede08488ced2f721</string>
+    <!--<string name="facebook_app_id">411250219226485</string>-->
+    <!--<string name="ak_login_protocol_scheme">ak411250219226485</string>
+    <string name="client_token">afcc20af339c90850e4944c873e17757</string>-->
     <string name="permissions_get_accounts_message">
         Grant permission to read your email address from your device to pre-fill.
     </string>

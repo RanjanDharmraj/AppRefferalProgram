@@ -5,10 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import org.json.JSONObject;
 
 import io.branch.referral.Branch;
 import io.branch.referral.BranchError;
+
+import static io.branch.referral.Defines.Jsonkey.DeepLinkPath;
 
 public class RefferalPage extends AppCompatActivity {
 
@@ -30,14 +34,13 @@ public class RefferalPage extends AppCompatActivity {
             public void onInitFinished(JSONObject referringParams, BranchError error) {
                 if (error == null) {
 
-                    String pictureID = referringParams.optString("picture_id", "");
-                    if (pictureID.equals("")) {
+                    Gson gson = new Gson();
+                    DeepLinkPath deepLinkPath = gson.fromJson(String.valueOf(referringParams),DeepLinkPath.class);
+
+                    if(deepLinkPath.getCategoryid() != null){
                         startActivity(new Intent(RefferalPage.this, HomeActivity.class));
-                    }
-                    else {
-                        Intent i = new Intent(RefferalPage.this, ViewerActivity.class);
-                        i.putExtra("picture_id", pictureID);
-                        startActivity(i);
+                    } else {
+                        startActivity(new Intent(RefferalPage.this, HomeActivity.class));
                     }
                 } else {
                     Log.i("MyApp", error.getMessage());

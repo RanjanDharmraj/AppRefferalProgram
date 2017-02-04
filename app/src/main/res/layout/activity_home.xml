@@ -10,4 +10,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="android.dharmraj.com.apprefferalprogram.HomeActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/workflowdiagram"
+        />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="Click On share Button and get 1200 Cashback From Perpule 1Pay"
+        />
+
+    <ImageButton
+        android:id="@+id/ibtn_Share"
+        android:onClick="onShare"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_share_2"/>
+
+
 </RelativeLayout>

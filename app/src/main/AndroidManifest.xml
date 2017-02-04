@@ -63,11 +63,13 @@
         <activity android:name=".fbAccountKit.TokenActivity" />
         <activity android:name=".fbAccountKit.ErrorActivity" />
         <activity android:name=".fbAccountKit.FbAccountKit" />
-        <activity android:name=".RefferalPage">
+        <activity android:name=".RefferalPage"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <data
                     android:host="open"
-                    android:scheme="App Refferal Program" />
+                    android:scheme="AppRefferalProgram" />
 
                 <action android:name="android.intent.action.VIEW" />
 

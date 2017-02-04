@@ -1,5 +1,7 @@
 package android.dharmraj.com.apprefferalprogram.digit;
 
+import android.content.Intent;
+import android.dharmraj.com.apprefferalprogram.HomeActivity;
 import android.dharmraj.com.apprefferalprogram.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +25,8 @@ public class LoginPage extends AppCompatActivity {
         digitsButton.setCallback(new AuthCallback() {
             @Override
             public void success(DigitsSession session, String phoneNumber) {
+
+                startActivity(new Intent(LoginPage.this, HomeActivity.class));
                 // TODO: associate the session userID with your user model
                 Toast.makeText(getApplicationContext(), "Authentication successful for "
                         + phoneNumber, Toast.LENGTH_LONG).show();
